@@ -10,8 +10,15 @@
       </h2>
       <div class="links">
         <nuxt-link to="Articles" class="button--green">
-          Go to blog articles
+          Go to blog articles(JSON)
         </nuxt-link>
+         <nuxt-link to="getmessage_online" class="button--green">
+          Go to blog articles(online)
+        </nuxt-link>
+         <nuxt-link to="myapi_call" class="button--green">
+          Go to blog articles(myapi)
+        </nuxt-link>
+         
         <a
           href="https://nuxtjs.org/"
           target="_blank"

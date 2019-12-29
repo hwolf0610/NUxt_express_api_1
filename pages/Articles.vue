@@ -1,7 +1,6 @@
 <template>
     <div>
         <h1>Articles</h1>
-
        <div v-for="article in articles" >
             <h2>{{article.title}}</h2>
             <h3>by {{article.author}}</h3>
