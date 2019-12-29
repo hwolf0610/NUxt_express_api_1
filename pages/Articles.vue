@@ -1,11 +1,10 @@
 <template>
     <div>
         <h1>Articles</h1>
-       <div v-for="article in articles" >
+       <div v-for="article in articles" :key="article">
             <h2>{{article.title}}</h2>
             <h3>by {{article.author}}</h3>
-            <br/>
-            
+            <br/>            
         </div>
     </div>
 

@@ -3,12 +3,7 @@
     <section>
       <h1>Page Header</h1>
       <div class="container links">
-        <ul>
-          <li v-for="breed in breeds" :key="breed">
-            <p class="breed button--green">{{breed.title}}</p>
-            <p class="breed button--green">{{breed.author}}</p><br>
-          </li>
-        </ul>
+         {{blogs}} 
         
          </div>
     </section>
@@ -16,14 +11,108 @@
 </template>
 
 <script>
-import axios from '~/plugins/axios'
+// import axios from '~/plugins/axios'
 
-  export default {
-    async asyncData () {
-      const {data} = await axios.get('/posts')
-      return {articles:data}
+//   export default {
+//     async asyncData () {
+//       const {data} = await axios.get('/posts')
+//       return {articles:data}
+//     }
+//   }
+
+import articles from '~/data/myapi.json'
+import axios from "axios";
+// import PageBanner from '~/components/PageBanner';
+
+export default {
+  head: {
+    title: 'Site Title: Blog',
+    meta: [
+      { hid: 'description', name: 'description', content: 'Site description' }
+    ]
+  },
+  components: {
+    // PageBanner
+  },
+  data () {
+    return {
+      blogs: articles, // Just set it here
+      isLoading: true
     }
-  }
+  },
+}
+
+
+// export default {
+//   head: {
+//     title: 'Site Title: Blog',
+//     meta: [
+//       { hid: 'description', name: 'description', content: 'Site description' }
+//     ]
+//   },
+//   // components: {
+//   //   PageBanner
+//   // },
+//   data () {
+//     return {
+//       blogs: [],
+//       isLoading: true
+//     }
+//   },
+//   created () {
+//     this.axios.get("~/data/myapi.json").then((response) => {
+//       this.blogs = response.data
+//       this.isLoading = false
+//     })
+//   }
+// }
+
+//  const data = {};
+//  export default {
+//    authors = await axios.get('~/data/myapi.json').then(res => res.data)
+
+
+    // data({  }) {      
+    //   return axios.get('~/data/myapi.json')
+    //     .then((res) => {
+    //       return {
+    //         authors: res.data
+    //       }
+    //     })
+    // }
+
+  // }
+
+
+// export default {
+
+//   data:function(){
+//         return{
+//             asyncData(callback) {
+//             axios.get("~/data/myapi.json").then(res => {
+//             callback(null, { breeds: res.data });
+//               });
+//             }
+//         }
+//     }
+
+     
+
+    // data:function(){
+    //     return{
+    //         breeds: articles
+    //     }
+    // }
+}
+
+// import axios from "axios";
+// export default {
+//   asyncData({ params }, callback) {
+//     axios.get("~/data/myapi.json").then(res => {
+//       callback(null, { breeds: res.data });
+//     });
+//   }
+// };
 
 
 // import axios from "axios";
