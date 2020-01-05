@@ -5,6 +5,7 @@
       <h1 class="title">Nuxt_1</h1>
       <h2 class="subtitle">My divine Nuxt.js project</h2>
       <div class="links">
+        <nuxt-link to="table" class="button--green">Go to blog Table</nuxt-link>
         <nuxt-link to="Articles" class="button--green">Go to blog articles(JSON)</nuxt-link>
         <nuxt-link to="getmessage_online" class="button--green">Go to blog articles(online)</nuxt-link>
         <nuxt-link to="helloworldStore" class="button--green">
